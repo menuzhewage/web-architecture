@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>web page</title>
+        <link rel="stylesheet" href="css/root.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://unpkg.com/scrollreveal"></script>
+    </head>
+    <body>
+
+        <header>
+            <nav>
+                <a href="">Home</a>
+                <a href="">Rotaract</a>
+                <a href="">SA</a>
+                <a href="">LEO</a>
+                <a href="">ZeroPlastic</a>
+                <a href="">IEEE</a>
+            </nav>
+        </header>
+        <section class="sec-01">
+            <div class="container">
+                <h2 class="main-title">IEEE.</h2>
+                <div class="content">
+                    <div class="image">
+                        <img src="images/ieee.jpg" alt="">
+                    </div>
+                    <div class="text-box">
+                        <h3>About Us.</h3>
+                        <p>We are a vibrant group of students at the CINEC Campus, 
+                            dedicated to fostering a community of passionate engineers, technologists, and innovators.</p>
+                    </div>
+                </div>
+                <div class="media-icons">
+                    <a href="#" class="icon"><i class="bx bxl-facebook"></i></a>
+                    <a href="#" class="icon"><i class="bx bxl-instagram"></i></a>
+                    <a href="#" class="icon"><i class="bx bxl-linkedin"></i></a>
+                    <a href="#" class="icon"><i class="bx bxl-github"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec-02">
+            <div class="container">
+                <h3 class="section-title">Faces of IEEE</h3>
+                <div class="content">
+                    <div class="image">
+                        <img src="images/member-ieee.jpg" alt="">
+                    </div>
+                    <div class="team-grid" id="team-grid">
+                        <div class="team-member">
+                            <div class="info">
+                                <h4 class="name">John Doe</h4>
+                                <p class="role">President</p>
+                                <p class="bio">Leading with passion for innovation and technology.</p>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="team-member">
+                            <div class="info">
+                                <h4 class="name">Jane Smith</h4>
+                                <p class="role">Vice President</p>
+                                <p class="bio">Innovative thinker and problem solver.</p>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="team-member">
+                            <div class="info">
+                                <h4 class="name">Jane Smith</h4>
+                                <p class="role">Vice President</p>
+                                <p class="bio">Innovative thinker and problem solver.</p>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="team-member">
+                            <div class="info">
+                                <h4 class="name">Jane Smith</h4>
+                                <p class="role">Vice President</p>
+                                <p class="bio">Innovative thinker and problem solver.</p>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="team-member">
+                            <div class="info">
+                                <h4 class="name">Jane Smith</h4>
+                                <p class="role">Vice President</p>
+                                <p class="bio">Innovative thinker and problem solver.</p>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec-03">
+            <div class="container">
+                <h3 class="section-title">Contact Us.</h3>
+                <div class="content">
+                    <div class="media-info">
+                        <li><a href="#"><i class="bx bxl-github"></i>GitHub</a></li>
+                        <li><a href="#"><i class="bx bxl-facebook"></i>Facebook</a></li>
+                        <li><a href="#"><i class="bx bxl-instagram"></i>Instagram</a></li>
+                        <li><a href="#"><i class="bx bxl-linkedin"></i>Linkedin</a></li>
+                    </div>
+                    <div class="image">
+                        <img src="images/social-media.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <script>
+
+            var pos = document.documentElement;
+            pos.addEventListener('mousemove', e =>{
+                pos.style.setProperty('--x', e.clientX + 'px')
+                pos.style.setProperty('--y', e.clientY + 'px')
+            })
+
+            ScrollReveal({ 
+                reset: true,
+                distance: '75px',
+                duration: 2500,
+                delay: 400
+            });
+
+            ScrollReveal().reveal('.main-title, .section-title', { delay: 400, origin: 'left' });
+            ScrollReveal().reveal('.sec-01 .image, .team-grid .team-member', { delay: 500, origin: 'bottom' });
+            ScrollReveal().reveal('.text-box', { delay: 600, origin: 'right' })
+            ScrollReveal().reveal('.media-icons i', { delay: 500, origin: 'bottom', interval: 200 })
+            ScrollReveal().reveal('.sec-02 .image, .sec-03 .image', { delay: 500, origin: 'top' })
+            ScrollReveal().reveal('.media-info li', { delay: 500, origin: 'left', interval: 200 })
+        </script>
+    </body>
+</html>
