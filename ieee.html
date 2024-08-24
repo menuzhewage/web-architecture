@@ -10,6 +10,8 @@
         <script src="https://unpkg.com/scrollreveal"></script>
     </head>
     <body>
+
+        <div id="header"></div>
         
         <section class="sec-01">
             <div class="container">
@@ -105,6 +107,80 @@
             </div>
         </section>
 
+        <section class="sec-05">
+            <div class="container">
+                <h3 class="section-title">Club Projects Showcase</h3>
+                <div class="projects">
+                    <div class="project-item">
+                        <div class="project-image">
+                            <img src="project1.jpg" alt="Project 1">
+                        </div>
+                        <div class="project-info">
+                            <h4 class="project-title">Project Title 1</h4>
+                            <p class="project-description">Brief description of the project goes here. Highlight the goals, outcomes, and impact of the project.</p>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-image">
+                            <img src="project2.jpg" alt="Project 2">
+                        </div>
+                        <div class="project-info">
+                            <h4 class="project-title">Project Title 2</h4>
+                            <p class="project-description">Brief description of the project goes here. Highlight the goals, outcomes, and impact of the project.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="sec-04">
+            <div class="container">
+                <h3 class="section-title">Club Highlights & Media Gallery.</h3>
+                <div class="content">
+                    <div class="media">
+                        <div class="media">
+                            <div class="media-item">
+                                <img src="image1.jpg" alt="Club Activity 1">
+                            </div>
+                            <div class="media-item">
+                                <img src="image2.jpg" alt="Club Activity 2">
+                            </div>
+                            <div class="media-item">
+                                <img src="image1.jpg" alt="Club Activity 1">
+                            </div>
+                            <div class="media-item">
+                                <img src="image2.jpg" alt="Club Activity 2">
+                            </div>
+                            <div class="media-item">
+                                <img src="image1.jpg" alt="Club Activity 1">
+                            </div>
+                            <div class="media-item">
+                                <img src="image2.jpg" alt="Club Activity 2">
+                            </div>
+                            <div class="media-item">
+                                <img src="image1.jpg" alt="Club Activity 1">
+                            </div>
+                            <div class="media-item">
+                                <img src="image2.jpg" alt="Club Activity 2">
+                            </div>
+                            <div class="media-item">
+                                <img src="image1.jpg" alt="Club Activity 1">
+                            </div>
+                            <div class="media-item">
+                                <img src="image2.jpg" alt="Club Activity 2">
+                            </div>
+                            <div class="media-item">
+                                <img src="image1.jpg" alt="Club Activity 1">
+                            </div>
+                            <div class="media-item">
+                                <img src="image2.jpg" alt="Club Activity 2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="sec-03">
             <div class="container">
                 <h3 class="section-title">Contact Us.</h3>
@@ -123,8 +199,14 @@
         </section>
 
         
-
         <script>
+
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error))
 
             var pos = document.documentElement;
             pos.addEventListener('mousemove', e =>{
@@ -138,13 +220,43 @@
                 duration: 2500,
                 delay: 400
             });
-
             ScrollReveal().reveal('.main-title, .section-title', { delay: 400, origin: 'left' });
             ScrollReveal().reveal('.sec-01 .image, .team-grid .team-member', { delay: 500, origin: 'bottom' });
             ScrollReveal().reveal('.text-box', { delay: 600, origin: 'right' })
             ScrollReveal().reveal('.media-icons i', { delay: 500, origin: 'bottom', interval: 200 })
             ScrollReveal().reveal('.sec-02 .image, .sec-03 .image', { delay: 500, origin: 'top' })
             ScrollReveal().reveal('.media-info li', { delay: 500, origin: 'left', interval: 200 })
+
+            // ScrollReveal configuration section-04
+            ScrollReveal().reveal('.section-title', {
+                duration: 1000,
+                origin: 'top',
+                distance: '50px',
+                delay: 200,
+                easing: 'ease-in-out'
+            });
+
+            ScrollReveal().reveal('.media-item', {
+                duration: 1200,
+                origin: 'bottom',
+                distance: '50px',
+                interval: 200,
+                easing: 'ease-in-out'
+            });
+
+            // ScrollReveal configuration section-05
+
+            ScrollReveal().reveal('.project-item', {
+                duration: 1200,
+                origin: 'bottom',
+                distance: '50px',
+                interval: 200,
+                easing: 'ease-in-out'
+            });
+
+            const template = document.getElementById('header-template').content;
+            document.getElementById('header').appendChild(template.cloneNode(true));
+
         </script>
     </body>
 </html>
