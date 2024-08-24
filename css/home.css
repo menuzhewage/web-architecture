@@ -98,7 +98,7 @@ a {
     transform: translateX(-50%);
     padding-right: 30%;
     box-sizing: border-box;
-    color: #fff;
+    color: var(--text-color);
     text-shadow: 0 5px 10px #0004;
 }
 .carousel .list .item .author{
@@ -130,7 +130,7 @@ a {
 .carousel .list .item .buttons button:nth-child(2){
     background-color: transparent;
     border: 1px solid #fff;
-    color: #eee;
+    color: var(--text-color);
 }
 
 .thumbnail{
@@ -155,7 +155,7 @@ a {
     border-radius: 20px;
 }
 .thumbnail .item .content{
-    color: #fff;
+    color: var(--text-color);
     position: absolute;
     bottom: 10px;
     left: 10px;
@@ -164,6 +164,7 @@ a {
 .thumbnail .item .content .title{
     font-weight: 500;
     font-size: 18px;
+    color: #f1683a;
 }
 .thumbnail .item .content .description{
     font-weight: 300;
@@ -187,7 +188,7 @@ a {
     border-radius: 50%;
     background-color: #eee4;
     border: none;
-    color: #fff;
+    color: var(--text-color);
     font-family: monospace;
     font-weight: bold;
     transition: .5s;
