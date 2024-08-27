@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniHUB</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"');
+
+
+        body {
+            background: linear-gradient(to bottom, #000000, #054058, hsl(189, 80%, 49%));
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .content {
+            text-align: center;
+            width: 80%;
+        }
+        .container {
+            background-color: hwb(213 2% 86%);
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            transition: opacity 2s;
+        }
+        .container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .container .text-over-image {
+            position: absolute;
+            color: white;
+            font-size: 2em;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        h1 {
+            font-family:Caveat;
+            font-size: 100px;
+            transform: translateX(-100%);
+            opacity: 0;
+            transition: transform 1.5s ease-in, opacity 1.5s ease-in;
+        }
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 50px;
+            margin: 30px 0;
+            transform: scale(0.8);
+            opacity: 0;
+            transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+        }
+        .about-text {
+            background-color: hsl(201, 16%, 18%);
+            padding: 30px;
+            border-radius: 10px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+        }
+        .team-section {
+            margin-top: 50px;
+        }
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .team-member {
+            background-color: hwb(204 0% 78%);
+            color: black;
+            width: calc(20% - 20px);
+            aspect-ratio: 1/1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease-in, transform 1s ease-in;
+            padding: 10px;
+        }
+        .team-member img {
+            width: 80%;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 2px solid rgb(255, 255, 255);
+        }
+        .team-member-text {
+            color: hsl(199, 100%, 53%);
+            text-align: center;
+        }
+        .gradient-text {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(45deg, hsl(300, 100%, 98%), rgb(0, 180, 193));
+            -webkit-background-clip: text;
+            color: transparent;
+            font-family:Comic Neue;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        
+        <div class="about-section" id="about-section">
+            <h1 style="text-align: left;">About US</h1>
+            <div class="about-text">
+                <div class="gradient-text">
+                <p>Welcome to the "UniHUB". Official website of CINEC Campus Clubs! At CINEC, we believe that university life extends beyond the classroom. Our vibrant and diverse range of clubs provides students with the opportunity to explore their passions, develop new skills, and build lasting friendships. Whether you're interested in the arts, technology, sports, or social causes, there's a place for you here.
+
+                   <br><br>Our clubs are student-led and driven by a shared commitment to fostering a dynamic campus culture. We strive to create an inclusive environment where every student feels encouraged to participate, contribute, and grow. Join us in making your university experience unforgettable by becoming part of a community that celebrates creativity, innovation, and collaboration.
+                    
+                 <br><br>Explore the clubs we have to offer and find the one that inspires you. Together, let's make CINEC a place where every student's talents and ambitions can thrive.</p>
+                </div>
+            </div>
+        </div>
+        <div class="team-section" id="team-section">
+            <h2>Team</h2>
+            <div class="team" id="team">
+                <div class="team-member">
+                    <img src="s.jpg" alt="Member 1">
+                    <div class="team-member-text">Sithija Menuwantha<br>Bsc (hons) in Software Engineering<br>CINEC</div>
+                </div>
+                <div class="team-member">
+                    <img src="K.jpg" alt="Member 2">
+                    <div class="team-member-text">Kasun Sri<br>Bsc (hons) in Software Engineering<br>CINEC</div>
+                </div>
+                <div class="team-member">
+                    <img src="p.png" alt="Member 3">
+                    <div class="team-member-text">Pranama Lakshan<br>Bsc (hons) in Software Engineering<br>CINEC</div>
+                </div>
+                <div class="team-member">
+                    <img src="r.jpg" alt="Member 4">
+                    <div class="team-member-text">Rashmi Samadara<br>Bsc (hons) in Software Engineering<br>CINEC</div>
+                </div>
+                <div class="team-member">
+                    <img src="d.png" alt="Member 5">
+                    <div class="team-member-text">Deshan Wickramasinghe<br>Bsc (hons) in Software Engineering<br>CINEC</div>
+                </div>
+                <div class="team-member">
+                    <img src="c.jpg" alt="Member 6">
+                    <div class="team-member-text">Chathurya Weerasinghe<br>Bsc (hons) in Software Engineering<br>CINEC</div>
+                </div>
+                <div class="team-member">
+                    <img src="A.jpg" alt="Member 7">
+                    <div class="team-member-text">Pubudu Sachith<br>Bsc (hons) in Software Engineering<br>CINEC</div>
+                </div>
+                <div class="team-member">
+                    <img src="Rr.jpg" alt="Member 8">
+                    <div class="team-member-text">Mihiranga<br>Bsc (hons) in Software Engineering<br>CINEC</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Intersection Observer for About us text
+        const aboutSection = document.getElementById('about-section');
+        const teamSection = document.getElementById('team-section');
+        
+        const aboutObserverOptions = {
+            root: null,
+            threshold: 0.1
+        };
+        
+        const aboutObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.querySelector('h1').style.transform = 'translateX(0)';
+                    entry.target.querySelector('h1').style.opacity = '1';
+                    entry.target.querySelector('.about-text').style.opacity = '1';
+                    entry.target.querySelector('.about-text').style.transform = 'translateY(0)';
+                }
+            });
+        }, aboutObserverOptions);
+        
+        aboutObserver.observe(aboutSection);
+        
+        // Intersection Observer for Team members
+        const teamObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0.1
+        });
+        
+        document.querySelectorAll('.team-member').forEach(member => {
+            teamObserver.observe(member);
+        });
+        
+        // Intersection Observer for Team section title
+        const teamTitleObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.querySelector('h2').style.transform = 'scale(1)';
+                    entry.target.querySelector('h2').style.opacity = '1';
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0.1
+        });
+
+        teamTitleObserver.observe(teamSection);
+
+        // Intersection Observer for text over image
+        const container = document.querySelector('.container');
+        const textOverImage = container.querySelector('.text-over-image');
+        
+        const textObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    textOverImage.style.opacity = '1';
+                }
+            });
+        }, {
+            threshold: 0.4
+        });
+        
+        textObserver.observe(container);
+    </script>
+</body>
+</html>
