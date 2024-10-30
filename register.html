@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <img src="images/logo.png" alt="unihublogo">
+    <div class="register-container">
+        <h2>Register</h2>
+        <form action="php/register.php" method="post">
+            <div class="input-box">
+                <input type="text" name="username" required>
+                <label>Username</label>
+            </div>
+            <div class="input-box">
+                <input type="email" name="email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <input type="password" name="password" required>
+                <label>Password</label>
+            </div>
+            <div class="input-box">
+                <input type="password" name="confirm_password" required>
+                <label>Confirm Password</label>
+            </div>
+            <a href="login.html"><button type="submit">Register</button></a>
+            <br><br>
+        </form>
+    </div>
+    <div class="cursor"></div>
+    <script src="js/register.js"></script>
+</body>
+</html>
